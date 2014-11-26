@@ -1,0 +1,218 @@
+  <div id="popup-wrapper" style="background-color: #ccc;">
+    <form class="new_contact" action='/users/:id/contacts/new' id="new_contact" method="post">
+
+      <table>
+        <tr>
+          <th></th>
+          <th>Right</th>
+          <th>Left</th>
+        </tr>
+        <tr>
+          <td>Sphere</td>
+          <td>
+            <select name="r_sph_plus">
+              <option value="">+</option>
+              <option value="-">-</option>
+            </select>
+            <select name="r_sph_num">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <select name="r_sph_dec">
+              <option value=".00">.00</option>
+              <option value=".25">.25</option>
+              <option value=".50">.50</option>
+              <option value=".75">.75</option>  
+            </select>
+          </td>
+          <td>
+            <select name="l_sph_plus">
+              <option value="">+</option>
+              <option value="-">-</option>
+            </select>
+            <select name="l_sph_num">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <select name="l_sph_dec">
+              <option value=".00">.00</option>
+              <option value=".25">.25</option>
+              <option value=".50">.50</option>
+              <option value=".75">.75</option>  
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Cylinder</td>
+          <td>
+            <select name="r_cyl_plus">
+              <option value="">+</option>
+              <option value="-">-</option>
+            </select>
+            <select name="r_cyl_num">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <select name="r_cyl_dec">
+              <option value=".00">.00</option>
+              <option value=".25">.25</option>
+              <option value=".50">.50</option>
+              <option value=".75">.75</option>  
+            </select>
+          </td>
+          <td>
+            <select name="l_cyl_plus">
+              <option value="">+</option>
+              <option value="-">-</option>
+            </select>
+            <select name="l_cyl_num">
+              <option value="0">0</option>            
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <select name="l_cyl_dec">
+              <option value=".00">.00</option>
+              <option value=".25">.25</option>
+              <option value=".50">.50</option>
+              <option value=".75">.75</option>  
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Axis</td>
+          <td>
+            <form>
+              <input type="text" name="r_axis" placeholder="Right Axis (0-180)"><br>
+            </form>
+          </td>
+          <td>
+            <form>
+              <input type="text" name="l_axis" placeholder="Left Axis (0-180)"><br>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>BC</td>
+          <td>
+            <select name="r_bc_num">
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+            <select name="r_bc_dec">
+              <option value=".0">.0</option>            
+              <option value=".1">.1</option>
+              <option value=".2">.2</option>
+              <option value=".3">.3</option>
+              <option value=".4">.4</option>
+              <option value=".5">.5</option>
+              <option value=".6">.6</option>
+              <option value=".7">.7</option>
+              <option value=".8">.8</option>
+              <option value=".9">.9</option>
+            </select>
+          </td>
+          <td>
+            <select name="l_bc_num">
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+            <select name="l_bc_dec">
+              <option value=".0">.0</option>            
+              <option value=".1">.1</option>
+              <option value=".2">.2</option>
+              <option value=".3">.3</option>
+              <option value=".4">.4</option>
+              <option value=".5">.5</option>
+              <option value=".6">.6</option>
+              <option value=".7">.7</option>
+              <option value=".8">.8</option>
+              <option value=".9">.9</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Diameter</td>
+          <td>
+            <select name="r_diam_num">           
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+            </select>
+            <select name="r_diam_dec">
+              <option value=".0">.0</option>            
+              <option value=".1">.1</option>
+              <option value=".2">.2</option>
+              <option value=".3">.3</option>
+              <option value=".4">.4</option>
+              <option value=".5">.5</option>
+              <option value=".6">.6</option>
+              <option value=".7">.7</option>
+              <option value=".8">.8</option>
+              <option value=".9">.9</option>
+            </select>
+          </td>
+          <td>
+            <select name="l_diam_num">           
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+            </select>
+            <select name="l_diam_dec">
+              <option value=".0">.0</option>            
+              <option value=".1">.1</option>
+              <option value=".2">.2</option>
+              <option value=".3">.3</option>
+              <option value=".4">.4</option>
+              <option value=".5">.5</option>
+              <option value=".6">.6</option>
+              <option value=".7">.7</option>
+              <option value=".8">.8</option>
+              <option value=".9">.9</option>
+            </select>
+          </td>
+        </tr>               
+      </table>
+      <div id="buttons">
+        <input type="submit">
+        <input type="button" value="Close" id="close-btn">
+        <input type="hidden" class="btn btn-default" name="user_id" value="<%=current_user.id%>">
+      </div>
+    </form>
+  </div>

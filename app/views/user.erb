@@ -1,0 +1,128 @@
+  <div class="content_top">
+    <div class="top_container">
+      <h4>Optical RX</h4>
+      <p>Mea id minimum ocurreret, fuisset corrumpit voluptatum eu sea, pro justo choro in. Alia habemus forensibus eu mei. Graecis maiestatis per te, qui et populo laoreet incorrupte. Mel dicit aliquip reformidans ex, mea essent nominati adolescens an. Ut mea postea propriae, justo meliore convenire duo ex. Ne eam nulla singulis neglegentur, has an dico inani nostro, usu possit aliquip senserit at. Stet autem impetus ex cum, ei duis tempor neglegentur eos.</p>
+    </div>
+      <div class="ipsum_pic">
+        <img src="/img/ipsum_pic.png">
+      </div>
+  </div>
+<div class="container">
+      <div class="extra_content">
+        <p>Lobortis ullamcorper id sed. An minim debitis pri. Ea insolens dissentias vim, eu nam dolorum nusquam, dicat quaeque dissentias an vel.</p>
+      </div>
+  <h2>Welcome, <%= current_user.name %></h2>
+  <h3>You currently have <%= current_user.prescriptions.count %> prescriptions:</h3>
+    <div id="prescription_list">
+      <ul><% current_user.prescriptions.each do |prescription| %>
+        <li>
+          <div id="<%=prescription.id%>_myModal" class="modal fade">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title"><%= prescription.prescribable_type %> prescription created on <%= prescription.created_at.to_date %></h4>
+                      </div>
+                      <div class="modal-body">
+                        <% if prescription.prescribable_type == "Contacts" %>
+                              <table class='table table-bordered'>
+                                <col width="100">
+                                <col width="100">
+                                <col width="100">
+                                <tr>
+                                  <th></th>
+                                  <th style="text-align:center">Right</th>
+                                  <th style="text-align:center">Left</th>
+                                </tr>
+                                <tr>
+                                  <th>Sphere</th>
+                                  <td><%= prescription.contact.r_sph %></td>
+                                  <td><%= prescription.contact.l_sph %></td>
+                                </tr>
+                                <tr>
+                                  <th>Cylinder</th>
+                                  <td><%= prescription.contact.r_cyl %></td>
+                                  <td><%= prescription.contact.l_cyl %></td>
+                                </tr>
+                                <tr>
+                                  <th>Axis</th>
+                                  <td><%= prescription.contact.r_axis %></td>
+                                  <td><%= prescription.contact.l_axis %></td>
+                                </tr>
+                                <tr>
+                                  <th>BC</th>
+                                  <td><%= prescription.contact.r_bc %></td>
+                                  <td><%= prescription.contact.l_bc %></td>
+                                </tr>
+                                <tr>
+                                  <th>Diameter</th>
+                                  <td><%= prescription.contact.r_diam %></td>
+                                  <td><%= prescription.contact.l_diam %></td>
+                                </tr>               
+                              </table>
+                        <% elsif prescription.prescribable_type == "Eyeglasses" %>
+                              <table class='table table-bordered'>
+                                <col width="100">
+                                <col width="100">
+                                <col width="100">
+                                <tr>
+                                  <th></th>
+                                  <th style="text-align:center">Right</th>
+                                  <th style="text-align:center">Left</th>
+                                </tr>
+                                <tr>
+                                  <th>Sphere</th>
+                                  <td><%= prescription.eyeglass.r_sph %></td>
+                                  <td><%= prescription.eyeglass.l_sph %></td>
+                                </tr>
+                                <tr>
+                                  <th>Cylinder</th>
+                                  <td><%= prescription.eyeglass.r_cyl %></td>
+                                  <td><%= prescription.eyeglass.l_cyl %></td>
+                                </tr>
+                                <tr>
+                                  <th>Axis</th>
+                                  <td><%= prescription.eyeglass.r_axis %></td>
+                                  <td><%= prescription.eyeglass.l_axis %></td>
+                                </tr>           
+                              </table>
+                        <% end %>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <a href="#<%=prescription.id%>_myModal" class="btn" data-toggle="modal"><%= prescription.prescribable_type %> prescription created on <%= prescription.created_at.to_date %></a>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="add_buttons">
+      <div id="clicker_contact">
+        <form>
+          <input type="button" class="btn btn-lg btn-primary" value="Add a Prescription for Contacts">
+        </form>
+      </div>
+
+      <div id="clicker_eyeglass">
+        <form>
+          <input type="button" class="btn btn-lg btn-primary" value="Add a Prescription for Eyeglasses">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
